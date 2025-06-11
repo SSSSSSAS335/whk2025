@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>diaocha</title>
+    <link type="text/css" rel="stylesheet" href="fourth.css">
+    <script src="5.js" defer></script>
+</head>
+<body>
+    <!-- 原有页面内容保持不变 -->
+    <div class="body_top">
+        <div class="body_top_city">湖南省常德市</div>
+    </div>
+
+    <div class="dh">
+        <ul>
+         <li><a href="second.html">首页</a></li>
+        <li><a href="main.html">不朽传说</a></li>
+        <li><a href="thrid.html">欢乐天地</a></li>
+        <li><a href="fourth.html">其它</a></li>
+        </ul>
+    </div>
+
+    <div id="main">
+        <!-- 原有表单内容保持不变 -->
+        <form>
+             <fieldset>
+                <!--定义域标题-->
+                <legend align="center">开心树洞</legend>
+                1.您怎么称呼（填写姓名或网名）：<input name="jiaxiang" type="text"><br><br>
+                2.最喜欢什么娱乐方式：<br><input name="lj" type="radio" value="liaojie" checked="checked" />旅游<br>
+                <input name="lj" type="radio" value="henliaojie" />运动<br>
+                <input name="lj" type="radio" value="buliaojie" />健身<br>
+                <input name="fenqi" type="radio" value="bijiaohao" />听音乐<br>
+                <input name="fenqi" type="radio" value="bijiaocha" />玩游戏<br>
+                <input name="fenqi" type="radio" value="buqingchu" />其它<br><br>
+                3.您心目中的工作是什么样子的？（可多选）<br><input name="yangzi" type="checkbox" value="1"
+                    checked="checked" />进入企业，早九晚五，加双休<br>
+                <input name="yangzi" type="checkbox" value="2" />进事业编，铁饭碗，香馍馍<br>
+                <input name="yangzi" type="checkbox" value="2" /> “铁人三项”，相干就干，不用看脸色<br>
+                <input name="yangzi" type="checkbox" value="2" /> 进厂打螺丝，两班倒，纯牛马<br>
+                <input name="yangzi" type="checkbox" value="2" />自主创业，风大浪大鱼更大<br>
+                <input name="yangzi" type="checkbox" value="2" />自媒体达人，吃流量饭碗<br>
+                <input name="yangzi" type="checkbox" value="2" /> 其他<br><br>
+                4.您对于您现在的工作还满意吗？<br><textarea name="chuantong" rows="3" cols="60" wrap="virtual"></textarea><br><br>
+                5.您认读书有用吗？<br><textarea name="meishi" rows="3" cols="60" wrap="virtual"></textarea><br><br>
+                6.您认可说走就走的旅行吗？<br><textarea name="fengjin" rows="3" cols="60" wrap="virtual"></textarea><br><br>
+                7.您觉得读书好还是工作好？<br><input name="fenqi" type="radio" value="henhao" />读书好<br>
+                <input name="fenqi" type="radio" value="henhao" />工作好<br><br>
+                8.请填写您的宝贵意见:<br><textarea name="yijian" rows="5" cols="60" wrap="virtual"></textarea>
+                <br>
+            </fieldset>
+            <div id="tijiao">
+                <input type="submit" name="submit" value="提交">
+                <input type="reset" name="reset" value="重置">
+            </div>
+        </form>
+    </div>
+
+    <!-- 浮动窗口结构 -->
+    <div class="float-window" id="floatWindow">
+        <div class="window-header">
+            <span>流动音乐（暖暖）</span>
+            <button class="close-btn" onclick="closeWindow()">×</button>
+        </div>
+        <div class="window-content">
+            <audio id="myAudio" src="audio/梁静茹 - 暖暖 (DJ弹鼓版)(DJ阿樂版).mp3"></audio>
+            <img src="imges/4-1.jpg"   alt="旋转图片" id="rotatingImage">
+            <button class="control-btn" onclick="togglePlay()">播放/暂停</button>
+        </div>
+    </div>
+
+    <div class="footer">
+        <img id="fi1" src="imges/010.jpg!con">
+        <p>用心精制 独具匠心</p>
+        <p>联系我们: 8888-88888</p>
+    </div>
+</body>
+</html>

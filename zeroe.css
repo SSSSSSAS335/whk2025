@@ -1,0 +1,67 @@
+ body {
+  /* 基础背景设置 */
+ background: url(imges/kv4.webp) no-repeat center center fixed;
+  background-size: cover;    /* 关键属性：覆盖整个容器 */
+ 
+}
+
+.v1 {
+    border-radius: 5%;
+    font-size: 80px;
+    position: absolute;
+    top: 20%;    /* 垂直方向定位到页面高度的1/4处 */
+    left: 50%;   /* 水平方向定位到页面宽度的1/4处 */
+    transform: translate(-50%, -50%); /* 反向偏移实现精准居中 */
+    
+    /* 保持原有样式 */
+    background-color: #ff0000;
+    opacity: 0.6;
+    backdrop-filter: blur(5px);
+    border: 2px solid rgba(104, 190, 241, 0.5);
+ 
+}
+
+/* 悬停效果保持不变 */
+.v2:hover {
+    
+    
+    background-color: #00ff95;
+    border-color: rgba(255, 107, 107, 0.8);
+}
+
+
+
+.v2{
+
+    background-color: rgb(59, 154, 255);
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* 透明效果 */
+   
+   
+   
+    
+    /* 艺术字体样式 */
+    font-family: 'Brush Script MT', cursive; /* 手写字体 */
+    font-size: 2.5em;
+    color: #ff6b6b; /* 鲑鱼粉文字 */
+    text-shadow: 
+        2px 2px 0 rgba(255, 255, 255, 0.5),
+        -1px -1px 0 rgba(0, 0, 0, 0.3); /* 立体阴影 */
+    text-transform: uppercase; /* 全大写字母 */
+    letter-spacing: 3px; /* 字母间距 */
+    padding: 15px 30px;
+    border-radius: 50px; /* 圆角边框 */
+    
+    /* 动画效果 */
+    transition: all 0.3s ease;
+}
+ 
+/* 悬停效果增强 */
+/* .v1:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 107, 107, 0.8);
+} */

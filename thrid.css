@@ -1,0 +1,504 @@
+/* 基础样式重置 */
+* {
+   
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+   
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+   
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding-left: 80px; /* 为侧边栏留出空间 */
+    transition: padding 0.3s ease;
+    background: #c5dcfe;
+}
+
+/* 顶部城市显示 */
+.body-top {
+  
+    background: #f0f0f0;
+    padding: 15px 20px; /* 增加垂直内边距 */
+    border-bottom: 1px solid #ddd;
+    font-size: 3.2rem; /* 增大字体尺寸 */
+    
+    /* 新增艺术字体样式 */
+    font-family: 'KaiTi', 'STKaiti', '楷体', cursive; /* 楷体字体栈 */
+    text-align: center; /* 水平居中 */
+    
+    /* 垂直居中方案（使用flex布局） */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60px; /* 设置最小高度保证垂直空间 */
+    
+    /* 文字阴影增强艺术效果 */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+ 
+/* 主导航栏 */
+.main-nav {
+    background: #579cf1;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.main-nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* 固定侧边导航栏 */
+.sticky-sidebar {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 15px 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    z-index: 99;
+    transition: all 0.3s ease;
+    border: 1px solid #e9ecef;
+}
+
+.nav-item {
+    display: block;
+    padding: 12px 8px;
+    margin: 8px 0;
+    color: #333;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-item:hover {
+    background: rgba(0, 123, 255, 0.1);
+    transform: translateX(5px);
+}
+
+.nav-item.active {
+    background: #322bf7cb;
+    color: white;
+    font-weight: 500;
+    font-size: 19px;
+}
+.nav-item.active1 {
+    background: #3b69f2;
+    color: white;
+    font-weight: 500;
+}.nav-item.active2 {
+    background: #5583f8;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 19px;
+}.nav-item.active3 {
+    background: #54bdf2;
+    color: white;
+    font-weight: 500;
+    font-size: 19px;
+}
+
+.nav-item.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: #ffd700;
+}
+
+/* 内容区域 */
+.content-wrapper {
+    padding: 2rem 5vw;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content-section {
+     
+    min-height: 100vh;
+    padding: 30px;
+    margin-bottom: 20px;
+    scroll-margin-top: 60px;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+
+      
+    justify-content: center;  
+   
+}
+
+/* 页脚 */
+.page-footer {
+    background: #7cb9f5;
+    color: white;
+    padding: 3vh 5vw;
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.page-footer img {
+    border-radius: 10%;
+    max-width: 200px;
+    width: 30vw;
+    height: auto;
+    max-height: 100px;
+}
+
+.footer-content {
+    text-align: center;
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+    body {
+        padding-left: 70px;
+    }
+
+    .sticky-sidebar {
+        left: 10px;
+        padding: 12px 8px;
+    }
+
+    .nav-item {
+        padding: 10px 6px;
+        margin: 6px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-left: 0;
+    }
+
+    .sticky-sidebar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: auto;
+        transform: none;
+        display: flex;
+        justify-content: space-around;
+        background: white;
+        padding: 10px 0;
+        border-radius: 15px 15px 0 0;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-item {
+        flex-direction: column;
+        padding: 15px;
+        margin: 0;
+    }
+
+    .nav-item.active::before {
+        display: none;
+    }
+}
+
+
+/* 新增艺术字体引入（在文件顶部添加） */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Great+Vibes&display=swap');
+ 
+/* 报告下载标题专用样式 */
+#section4 h2 {
+        
+    text-align: center; /* 水平居中 */
+    font-family: 'Great Vibes', cursive; /* 艺术字体 */
+    font-size: 3.0rem;
+    color: #f41212aa;
+    margin: 2px 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+    display: inline-block;
+}
+ 
+/* 添加动态装饰效果 */
+#section4 h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 2px;
+    background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+    border-radius: 5px;
+}
+ 
+/* 响应式调整 */
+@media (max-width: 268px) {
+    #section4 h2 {
+        font-size: 1.5rem;
+    }
+}
+ 
+@media (max-width: 180px) {
+    #section4 h2 {
+        font-size: 1.5rem;
+    }
+}
+#zo{
+     text-align: center; /* 内容文字居中（可选） */
+   
+}
+#n4 {
+    border-radius: 10px;
+    background-color: #ffddac;
+    width: 100%; /* 可根据需要调整 */
+    height: 75px;
+    text-align: center; /* 内容文字居中（可选） */
+}
+
+#ro{
+    padding-top: 20px;
+    
+    /* 新增弹性布局 */
+    display: flex;
+   
+    width: 100%;
+ 
+}
+
+#mv{
+    
+	margin-top: 20px;
+    width: 33%;
+   padding: 2px;
+   margin: 2px;
+    background-color: rgb(241, 236, 190);
+    border-radius: 5px;
+}
+
+#t{
+    margin-top: 20px;
+    background-color:  rgb(241, 236, 190);
+    border-radius: 10px;
+    
+	color: #ff0000;
+}
+
+ 
+#zhuti-right {
+    margin-top: 20px;
+    border-radius: 20px;/*右边整体设置*/
+    float: left;/*左浮动*/
+    height: 250px;
+
+    background-color: rgb(210, 200, 170);
+   
+}
+ 
+ 
+#zhuti-right img {/*右边图片设置*/
+    width: 270px;
+    height: 200px;
+    border: 2px #cc66 ridge;
+}
+ 
+#zhuti-right ul {/*右边列表设置图片*/
+    list-style-type: none;/*列表样式无*/
+}
+ 
+#zhuti-right li {
+    float: left;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 创建3等宽列 */
+  gap: 10px; /* 列间距 */
+  margin-top: 15px;
+}
+ 
+.grid-item {
+  background: #d3e5f7;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+ 
+/* 响应式处理（可选） */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* 小屏幕显示为单列 */
+  }
+}
+
+
+ 
+
+span{
+    /*>>>行内设置*/
+    float: right;
+}
+span p{/*>>>行内段落设置*/
+    font-size: small;
+}
+span a{/*链接设置*/
+    color: rgb(0, 0, 0);
+}
+span a:hover{/*鼠标划过时链接变化*/
+    color: rgb(77, 248, 10);
+}
+.zhuti h2{/*主体标题设置*/
+    color: red;
+    font-family: 楷体;/*字体样式*/
+    margin-top: 20px;
+}
+.zhuti{/*主体设置*/
+    margin-top: 10px;
+    padding-bottom: 20px;
+    text-align: center;/*文本居中*/
+border-radius: 10px;
+background-color: rgb(235, 225, 225);
+}
+#taiba{/*太白介绍*/
+    margin-top: 20px;
+    height: 200px;
+    background-color: rgb(235, 225, 225);
+    font-size: x-large;
+    padding: 10px;
+    font-family: 楷体;
+}
+#taiba p{
+    letter-spacing: 2px;/*字简介*/
+    text-indent: 2em;/*缩进*/
+    line-height: 1.5em;/*行高设置*/
+    font-size: large;
+ 
+}
+#taiba video{/*太白图片*/
+    height: 250px;
+    width:380px;
+    float: left;
+    margin: 0px 10px 0px 0px;
+  
+}
+#taiba img:hover {/*鼠标划过时*/
+    transform: scale(1.2);
+ 
+}
+ 
+#caoyuan{/*关山草原介绍*/
+    margin-top: 20px;
+    height: 200px;
+    background-color: rgb(235, 225, 225);
+    font-size: x-large;
+    padding: 10px;
+    font-family: 楷体;
+}
+#caoyuan p{/*关山草原段落*/
+    letter-spacing: 2px;
+    text-indent: 2em;
+    line-height: 1.5em;
+    font-size: large;
+ 
+}
+#caoyuan img{/*关山草原图片*/
+    height: 200px;
+    width: 300px;
+    float: left;
+    margin: 0px 10px 0px 0px;
+}
+#caoyuan img:hover {/*鼠标关山草原图片时*/
+    transform: scale(1.2);
+ 
+}
+ 
+#jialin{/*嘉陵江源头介绍*/
+    margin-top: 20px;
+    height: 200px;
+    background-color: rgb(235, 225, 225);
+    font-size: x-large;
+    padding: 10px;
+    font-family: 楷体;
+}
+#jialin p{/*嘉陵江源头段落*/
+    letter-spacing: 2px;
+    text-indent: 2em;
+    line-height: 1.5em;
+    font-size: large;
+ 
+}
+#jialin img{/*嘉陵江源头图片*/
+    height: 200px;
+    width: 300px;
+    float: left;
+    margin: 0px 10px 0px 0px;
+}
+#jialin img:hover {/*鼠标划过时嘉陵江源头图片*/
+    transform: scale(1.2);
+ 
+}
+
+.zhuti a{/*主体超链接设置*/
+    text-decoration: none;
+}
+
+
+/* CSS 部分 (styles.css) */
+#rotatingImage {
+    width: 200px;
+    height: auto;
+    transition: transform 0.1s linear; /* 平滑过渡效果 */
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#AA{
+    background: url();
+    display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center;     /* 垂直居中 */
+  min-height: 100vh;       /* 确保父容器有高度 */
+
+}
+

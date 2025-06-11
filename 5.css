@@ -1,0 +1,298 @@
+/* 基础样式重置 */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* 页面主体样式 */
+body {
+  background: url(imges/33.png);
+  background-size: 100% 100%;
+  background-color: #2e88e2;
+  font-family: "Microsoft YaHei", sans-serif;
+}
+
+/* 顶部导航样式 */
+.con {
+  border-radius: 10%;
+  background: url(imges/011.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 966px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-top: 20px;
+  height: 120px;
+}
+
+.photo {
+  border-radius: 15%;
+  width: 165px;
+  height: 120px;
+  background: url(imges/010.jpg!con);
+  float: left;
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+.headerlist {
+  float: right;
+}
+
+.headerlist ul {
+  height: 44px;
+  margin-top: 10px;
+  line-height: 44px;
+}
+
+.headerlist li {
+  border-radius: 20px;
+  border: 1px solid #ffffff;
+  background-color: rgb(255, 231, 96);
+  float: left;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  margin: 4px;
+  cursor: pointer;
+}
+
+.headerlist li:hover {
+  background-color: hsl(32, 98%, 64%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(242, 210, 2, 0.4);
+  color: #2c2c2c;
+}
+
+.headerlist a {
+  border-right: 1px solid #b2c7ea;
+  padding: 0 10px;
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  display: block;
+}
+
+.headerlist .last {
+  border: 0;
+  padding-right: 0;
+}
+
+.headerlist li .active {
+  color: rgb(47, 38, 173);
+}
+
+.serch {
+  margin-top: 15px;
+  float: right;
+  width: 234px;
+  height: 28px;
+  border: 1px solid indigo;
+}
+
+.serch input {
+  background-color: #fdfbe5;
+  border: 0;
+  outline: none;
+  width: 210px;
+  float: left;
+  height: 28px;
+  padding-left: 14px;
+}
+
+/* 中部导航样式 */
+.dh ul {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+  height: 30px;
+}
+
+.dh ul li {
+  height: 40px;
+  width: 25%;
+  list-style: none;
+  display: inline;
+  font: 0.9em;
+}
+
+.dh ul li a {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: larger;
+  font-family: 楷体;
+  width: 100%;
+  margin: 0;
+  text-decoration: none;
+  display: block;
+  background-color: rgb(87, 156, 241);
+  line-height: 40px;
+  border-bottom: 0px solid rgb(168, 164, 172);
+}
+
+.dh ul li a:hover {
+  color: rgb(0, 0, 0);
+  background-color: rgb(5, 193, 206);
+  border-bottom: 3px solid rgb(16, 4, 28);
+}
+
+/* 主体内容样式 */
+.body_width {
+  width: 1120px;
+  margin: 0 auto;
+}
+
+#body_1 {
+  padding-top: 3%;
+  display: flex;
+  width: 800px;
+  height: 300px;
+  margin: 0 auto 40px;
+}
+
+.mg {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+#wx {
+  border-radius: 10px;
+  opacity: 0.8;
+  width: 60%;
+  margin: 20px;
+  padding: 15px;
+  font-size: 27px;
+  font: italic 宋体;
+  background-color: rgb(193, 227, 253);
+}
+
+#wxmv {
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  font-family: cursive;
+  font-size: 2.5rem;
+  color: #2e88e2;
+  background: #c3f2ff;
+  width: 200px;
+  height: 200px;
+}
+
+.ee {
+  border-radius: 20%;
+}
+
+#mv {
+  margin: 40px auto;
+  width: 800px;
+  text-align: center;
+}
+
+#cool {
+  background: url(imges/kv4.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* 页脚样式 */
+.footer {
+  clear: both;
+  width: 100%;
+  height: 50px;
+  background-color: rgb(87, 156, 241);
+  color: rgb(99, 34, 34);
+  font: italic 14px/20px 宋体;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.footer p {
+  color: #ffffff;
+}
+
+/* 浮动窗口样式 */
+.float-window {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  z-index: 9999;
+  resize: both;
+  min-width: 200px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.window-header {
+  background: #4CAF50;
+  color: white;
+  padding: 10px;
+  cursor: move;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-btn {
+  background: #ff4444;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.window-content {
+  padding: 15px;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#rotatingImage {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 10px auto;
+  transition: transform 0.1s linear;
+}
+
+.control-btn {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  transition: all 0.3s ease;
+}
+
+.control-btn:hover {
+  background: #45a049;
+  transform: scale(1.05);
+}

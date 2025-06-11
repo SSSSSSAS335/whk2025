@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音画同步控制演示</title>
+    <style>
+        #rotatingImage {
+            width: 200px;
+            height: auto;
+            transition: transform 0.1s linear; /* 平滑过渡效果 */
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- 音频元素（替换为你的本地音频路径） -->
+    <audio id="myAudio" src="your-audio.mp3"></audio>
+    
+    <!-- 旋转图片（替换为你的图片路径） -->
+    <img src="your-image.jpg" alt="旋转图片" id="rotatingImage">
+    
+    <!-- 控制按钮 -->
+    <button onclick="togglePlay()">播放/暂停</button>
+
+    <script>
+        let isPlaying = false;
+        let rotateInterval;
+        let currentAngle = 0;
+        const rotationSpeed = 1; // 旋转速度（度/10ms）
+
+        function togglePlay() {
+            const audio = document.getElementById('myAudio');
+            const image = document.getElementById('rotatingImage');
+            
+            if (!isPlaying) {
+                // 播放音频
+                audio.play();
+                
+                // 启动旋转动画
+                rotateInterval = setInterval(() => {
+                    currentAngle += rotationSpeed;
+                    image.style.transform = `rotate(${currentAngle}deg)`;
+                }, 10);
+                
+                isPlaying = true;
+            } else {
+                // 暂停音频
+                audio.pause();
+                
+                // 停止旋转
+                clearInterval(rotateInterval);
+                isPlaying = false;
+            }
+        }
+
+        // 可选：音频结束时自动重置
+        document.getElementById('myAudio').addEventListener('ended', () => {
+            if (isPlaying) {
+                togglePlay();
+            }
+        });
+    </script>
+</body>
+</html>

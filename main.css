@@ -1,0 +1,376 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	background: url(imges/33.png);
+   background-size: 100% 100%;
+	background-color: #2e88e2;
+}
+
+ 
+.dh ul {
+    /*导航栏*/
+	display: flex;          /* 启用弹性布局 */
+    justify-content: center;/* 水平居中 */
+    width: 100%;
+    padding: 0px;/*内边距*/
+    height: 30px;/*高度*/
+    
+}
+ 
+.dh ul li {/*导航栏行的设置*/
+
+    height: 40px;
+    width: 25%;
+    list-style: none;/*列表样式*/
+
+    display: inline;
+    font: 0.9em;
+}
+ 
+.dh ul li a {/*导航栏链接设置*/
+    text-align: center;/*文本位置*/
+    color: rgb(255, 255, 255);
+    font-size: larger;/*字体大小*/
+    font-family: 楷体;
+    width: 100%;
+    margin: 0px;
+    text-decoration: none;/*列表样式*/
+    display: block;
+    background-color: rgb(87, 156, 241);
+    line-height: 40px;
+    border-bottom: 0px solid rgb(168, 164, 172);
+}
+ 
+.dh ul li a:hover {    /*鼠标划过导航栏时*/
+    color: rgb(0, 0, 0);
+    background-color: rgb(5, 193, 206);
+    border-bottom: 3px solid rgb(16, 4, 28);
+    
+}
+
+
+.body_width {
+	width: 1120px;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+.body_top {
+	background-color: rgb(16, 63, 138);
+}
+.body_top_city {
+	text-align: center;
+	color: #fff;
+	font-size: 40px;
+	font-weight: bold;
+	letter-spacing: 3px;
+	padding: 40px 0;
+}
+.body_nav {
+	background-color: rgba(0, 110, 171);
+}
+.body_nav .body_width {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 60px;
+}
+
+.body_nav :hover{
+	background-color: #2e88e2;
+	color: #695fe9;
+}
+
+.body_nav .body_width div {
+	
+	width: 20%;
+	text-align: center;
+}
+.body_nav .body_width div a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.mg{
+	border-radius: 50%;
+	width: 100%;
+	height: 100%;
+}
+
+#body_1{
+	padding-top: 3%;
+	  display: flex;
+	  position: center;
+	  width: 800px;;
+	  height: 300px;
+}
+
+.ee{
+	border-radius: 20%;
+}
+
+
+
+.footer {
+    /*尾部*/
+    
+    clear: both;/*清楚浮动*/
+    width: 100%;
+    height: 50px;
+    background-color: rgb(87, 156, 241);
+    color: rgb(99, 34, 34);
+    font: italic 14px/20px 宋体;/*文字样式*/
+    text-align: center;
+}
+ 
+
+#wxmv{
+
+	border-radius: 100%;
+  display: flex;          /* 启用弹性布局 */
+  justify-content: center; /* 水平居中 */
+  align-items: center;     /* 垂直居中 */
+  margin-top: 20px;
+  
+  /* 艺术体样式 */
+  font-family: cursive;    /* 草书字体（艺术体） */
+  /* font-family: "Comic Sans MS", cursive; 备用字体方案 */
+  font-size: 2.5rem;       /* 字号（根据需求调整） */
+  color: #2e88e2;          /* 字体颜色（深蓝色示例） */
+  
+  /* 可选背景色用于演示 */
+  background: #c3f2ff;    /* 浅灰色背景 */
+}
+#wx{
+    border-radius: 10px;
+    opacity: 0.8; /* 仅背景透明 */
+	width: 60%;
+	margin: 20px;
+	padding: 15px;
+	font-size: 27px;
+	 font: italic 宋体;/*文字样式*/
+	background-color: rgb(193, 227, 253);
+}
+
+.footer p{
+    color: #ffffff;
+}
+
+#mv{
+	margin-top: 40px;
+}
+
+#cool{
+
+    background: url(imges/kv4.webp);
+     background-size: cover;  /* 关键属性：保持比例并完全覆盖容器 */
+    background-position: center; /* 图片居中显示 */
+    background-repeat: no-repeat; /* 防止重复 */
+    margin: 0 auto;
+	
+}
+
+
+/* 顶部 */
+
+ul {
+    list-style: none;
+}
+ .con {
+    border-radius: 10%;
+    background: url(imges/011.jpg);
+    background-size: cover;  /* 关键属性：保持比例并完全覆盖容器 */
+    background-position: center; /* 图片居中显示 */
+    background-repeat: no-repeat; /* 防止重复 */
+    width: 966px;
+    margin: 0 auto;
+}
+ 
+.header {
+	margin-top: 20px;
+    height: 120px;
+}
+ 
+.photo {
+	border-radius: 15%;
+    width: 165px;
+    height: 120px;
+    background: url(imges/010.jpg!con);
+    float: left;
+    background-position: center;
+    background-size: 100% 100%;
+}
+ 
+.headerlist {
+    float: right;
+}
+ 
+.headerlist ul {
+    height: 44px;
+    margin-top: 10px;
+    line-height: 44px;
+}
+ 
+.headerlist li {
+    border-radius: 20px;
+    border: 1px solid #ffffff;
+    background-color: rgb(255, 231, 96);
+    float: left;
+    
+    /* 添加过渡动画 */
+    transition: all 0.3s ease;
+    
+    /* 基础状态优化 */
+    position: relative;
+    overflow: hidden;
+    margin: 4px;
+    cursor: pointer;
+}
+
+.headerlist li:hover {
+    background-color: hsl(32, 98%, 64%); /* 保持与原色一致的金色 */
+    
+    /* 增强反馈效果 */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(242, 210, 2, 0.4);
+    
+    /* 文字颜色对比（可选） */
+    color: #2c2c2c;
+}
+ 
+.headerlist a {
+	
+    border-right: 1px solid #b2c7ea;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+}
+ 
+.headerlist .last {
+    border: 0;
+    padding-right: 0;
+}
+ 
+.headerlist li .active {
+    color: rgb(47, 38, 173);
+}
+ 
+.serch {
+	margin-top: 15px;
+    float: right;
+    width: 234px;
+    height: 28px;
+    border: 1px solid indigo;
+
+    
+}
+ 
+.serch input {
+	background-color: #fdfbe5;
+    border: 0;
+    outline: none;
+    width: 210px;
+    float: left;
+    height: 28px;
+    padding-left: 14px;
+
+}
+
+/* 音乐 */
+/* 原有样式保持不变 */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    color: rgb(0, 0, 0);
+    font-family: 楷体;
+    background-color: rgb(218, 202, 202);
+}
+
+/* 新增浮动窗口样式 */
+.float-window {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    overflow: hidden;
+    z-index: 9999;
+    resize: both;
+    min-width: 200px;
+    min-height: 200px;
+}
+
+.window-header {
+    background: #4CAF50;
+    color: white;
+    padding: 10px;
+    cursor: move;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-btn {
+    background: #ff4444;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.window-content {
+    padding: 15px;
+    text-align: center;
+}
+
+#rotatingImage {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 10px auto;
+    transition: transform 0.1s linear;
+}
+
+.control-btn {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    transition: all 0.3s ease;
+}
+
+.control-btn:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
+ .float-window {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    overflow: hidden;
+    z-index: 9999;
+    resize: both;
+    min-width: 200px;
+    min-height: 200px;
+}
+ 
